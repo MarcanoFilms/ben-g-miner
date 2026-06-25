@@ -1,0 +1,28 @@
+[Unit]
+Description=Ben-G Miner - GPU Bitcoin SHA-256 Miner
+After=network.target datum-gateway.service
+Wants=datum-gateway.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/bfgminer \
+  --scan opencl:auto \
+  --gpu-platform 0 \
+  --no-local-bitcoin \
+  -o stratum+tcp://127.0.0.1:23334 \
+  -u bc1qYOUR_ADDRESS.rtx3060ti \
+  -p x \
+  --text-only \
+  --api-listen \
+  --api-port 4028 \
+  --api-allow W:127.0.0.1
+
+Restart=on-failure
+RestartSec=30
+
+Environment=DISPLAY=:0
+Environment=GPU_MAX_ALLOC_PERCENT=100
+Environment=GPU_USE_SYNC_OBJECTS=1
+
+[Install]
+WantedBy=default.target

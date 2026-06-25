@@ -1,0 +1,36 @@
+# Build artifacts
+*.o
+*.a
+*.so
+*.la
+*.lo
+
+# Executables
+/bfgminer
+/bfgminer-git
+
+# Temporary files
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+
+# Build directories
+autom4te.cache/
+.deps/
+.libs/
+
+# Local config (don't commit)
+~/.ben-g-miner/ben-g-miner.conf
+.ben-g-miner.local.conf
+
+# IDE
+.vscode/
+.idea/
+*.iml
