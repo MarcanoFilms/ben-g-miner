@@ -57,7 +57,7 @@ Ben-G Miner is a **complete, self-contained Bitcoin mining solution**:
 
 ```bash
 # 1. Clone repo
-git clone https://github.com/yourusername/ben-g-miner.git
+git clone https://github.com/MarcanoFilms/ben-g-miner.git
 cd ben-g-miner
 
 # 2. Run installer
